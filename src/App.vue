@@ -11,7 +11,6 @@ const draw_count_player2 = ref(0)
 const loss_count_player2 = ref(0)
 
 
-
 const control_game = {
 	'ค้อน': {
 		'ค้อน': 'เสมอ',
@@ -40,7 +39,6 @@ const control_game = {
 }
 
 
-
 const player1_choose = ref('');
 const player2_choose = ref('');
 const result = ref('');
@@ -51,7 +49,6 @@ const choiceImages = {
   'กระดาษ': 'https://media.discordapp.net/attachments/898851458068394004/1149365855512174732/paper-pixel.png',
   'ความรัก': 'https://media.discordapp.net/attachments/898851458068394004/1149365854966927370/hearts-pixel.gif',
 };
-
 
 
 function getRandomChoice() {
@@ -97,7 +94,7 @@ function reset_round() {
 <template>
   <div class="contrainer_all">
     <div class="box_title">
-			<div class="text_title">เกมเป่ายิ๊งฉุบ pixel 8 bit </div>
+			<div class="text_title">เกมเป่ายิ๊งฉุบ pixel</div>
     </div>
 
       <div class="contrainer_game">
@@ -105,13 +102,11 @@ function reset_round() {
           Player 1 : ได้ออก {{ player1_choose }} <br>
           <img v-if="!player1_choose" src="https://media.discordapp.net/attachments/898851458068394004/1149365855285690409/lucky-pixel.png" alt="Player 1 Default" class="box_img" />
           <img v-else :src="choiceImages[player1_choose]" alt="Player 1 Choice" class="box_img" />
-          <!--<img v-if="player1_choose" :src="choiceImages[player1_choose]" alt="Player 1 Choice" class="box_img"/>-->
         </div>
         <div class="box_2" id="box_play_2">
           Player 2 : ได้ออก {{ player2_choose }} <br>
           <img v-if="!player2_choose" src="https://media.discordapp.net/attachments/898851458068394004/1149365855285690409/lucky-pixel.png" alt="Player 2 Default" class="box_img" />
           <img v-else :src="choiceImages[player2_choose]" alt="Player 2 Choice" class="box_img" />
-          <!--<img v-if="player2_choose" :src="choiceImages[player2_choose]" alt="Player 2 Choice" class="box_img" />-->
         </div>
       </div>
 
@@ -122,16 +117,10 @@ function reset_round() {
   <div class="contrainer_score_all"> 
     <div class="contrainer_score_1">
       <div class="box_score"> ผลการแข่งขัน <br> {{ result }} </div>
-      <!--<div class="box_score"> แต้มชนะ Player1 <br> {{ win_count_player1 }} </div>-->
-      <!--<div class="box_score"> แต้มแพ้ Player1 <br> {{ loss_count_player1 }} </div>-->
-      <!--<div class="box_score"> แต้มเสมอ Player1 <br>{{ draw_count_player1 }} </div>-->
     </div>
     <div class="contrainer_score_2">
       <div class="box_score"> แต้ม : Player1 <br> {{ win_count_player1 }} </div>
       <div class="box_score"> แต้ม : Player2 <br> {{ win_count_player2 }} </div>
-      <!--<div class="box_score"> แต้มชนะ Player2 <br> {{ win_count_player2 }} </div>-->
-      <!--<div class="box_score"> แต้มแพ้ Player2 <br> {{ loss_count_player2 }} </div>-->
-      <!--<div class="box_score"> แต้มเสมอ Player2 <br>{{ draw_count_player2 }} </div>-->
     </div>
   </div> 
     <div class="box_new_game">
@@ -154,7 +143,6 @@ function reset_round() {
   font-weight: 400;
   color-scheme: light dark;
   color: #242424;
-  /*background-color: #ffffff;*/
   background-image: url("https://cdn.discordapp.com/attachments/898851458068394004/1149383610755989554/pixel-green-background.gif");
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -178,7 +166,6 @@ function reset_round() {
 
 /* -----contrainer_all----- */
 .contrainer_all {
-  /*background-image: linear-gradient( 135deg, #CE9FFC 10%, #7367F0 100%);*/
   background-color: rgba(106, 134, 104, 0.4);
   border-radius: 20px;
 }
@@ -191,7 +178,6 @@ function reset_round() {
   height: 50px;
   margin: auto;
   display: flex;
-  /*align-items: center;*/
   justify-content: center;
   border-radius: 15px;
 }
@@ -199,8 +185,6 @@ function reset_round() {
 .text_title {
   font-size: 32px;
   margin-top: -4px;
-  /*color: #ffffff;*/
-  /*text-shadow: 2px 2px 4px #000000;*/
 }
 
 
@@ -257,7 +241,6 @@ function reset_round() {
   align-items: center;
   justify-content: center;
   padding-bottom: 10px;
-  /*transition: border-color 0.25s;*/
 }
 
 .button_start_game:hover {
@@ -288,7 +271,6 @@ function reset_round() {
   backdrop-filter: blur(2px);
   box-shadow: 2px 2px 20px 5px rgba(53, 67, 52, 0.5);
   border-radius: 20px;
-  /*border:3px solid #ffffff;*/
 }
 
 .contrainer_score_1 {
