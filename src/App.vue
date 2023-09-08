@@ -97,7 +97,7 @@ function reset_round() {
 <template>
   <div class="contrainer_all">
     <div class="box_title">
-			<div class="text_title">เกมเป่ายิ๊งฉุบ pixel</div>
+			<div class="text_title">เกมเป่ายิ๊งฉุบ pixel 8 bit </div>
     </div>
 
       <div class="contrainer_game">
